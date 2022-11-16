@@ -1,0 +1,31 @@
+#mythonType:0
+def init_text_file(_path):
+    f = open(_path, 'w')
+    f.close()
+
+def get_list_from_file(_path, _sep):
+    f = open(_path, 'r')
+    result = f.read().split(_sep)
+    f.close()
+    return result
+
+per = None
+
+from mpython import *
+
+p0 = MPythonPin(0, PinMode.OUT)
+init_text_file('1.txt')
+per = str(get_list_from_file('1.txt', '\r\n'))
+if battery < 30:
+    p0.write_digital(1)
+if battery > 70:
+    p0.write_digital(0)
+import psutil
+#用cmd进入到python
+#的安装路径下的Scripts路径里，用pip install psutil来安装上面这个第三方库
+battery = psutil.sensors_battery()
+plugged = battery.power_plugged
+percent = str(battery.percent)
+if plugged==False: plugged="Not Plugged In"
+else: plugged="Plugged In"
+print(percent+'% | '+plugged)
