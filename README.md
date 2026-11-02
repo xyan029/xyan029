@@ -16,9 +16,7 @@
 
 | Project | What it does | Stack |
 |---|---|---|
-| [Noise Exposure — Pearson Airport](https://github.com/xyan029/noise-exposure-pearsonairport) | Maps aircraft noise contours around YYZ and estimates population exposure in surrounding communities. | R · Python · GIS |
-| [Food Program Accessibility — Mississauga](https://github.com/xyan029/Food_Program_Accessibility_Mississauga) | Who lives more than a 500 m walk from a food program? Compares Euclidean buffers with network service areas; the gap between the two is itself a finding. | Python · GeoPandas · OSMnx |
-| Aircraft overflight exposure in Toronto *(private, in progress)* | Daily runway-configuration inference from ADS-B data, joined to a census-tract panel. Pre-registration stage. | Python · DuckDB · OpenSky |
+| Aircraft overflight exposure, Toronto Pearson *(private, in progress)* | Who is under the approach path, and when? Infers the daily runway configuration at YYZ from ADS-B tracks and joins it to a 2021 census-tract daily panel. Pre-registration stage. | Python · GeoPandas · DuckDB |
 
 ### 🧰 Tools
 
